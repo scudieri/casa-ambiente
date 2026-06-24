@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Award, Hammer, Truck, HeartHandshake } from "lucide-react";
 import banner from "@/assets/banner.webp";
+import bannerVideo from "@/assets/banner-video.mp4";
 import heroLiving from "@/assets/hero-living.jpg";
 import storyFamily from "@/assets/story-family.jpg";
 import aboutFabrica from "@/assets/about-fabrica.jpg";
@@ -39,11 +40,14 @@ function Index() {
     <>
       {/* HERO */}
       <section className="relative h-screen w-full overflow-hidden bg-black text-white">
-        <img
-          src={banner}
-          alt="Casa Ambiente"
+        <video
+          src={bannerVideo}
+          poster={banner}
+          autoPlay
+          muted
+          loop
+          playsInline
           className="absolute inset-0 h-full w-full object-cover"
-          style={{ animation: "ken-burns 20s ease-in-out infinite alternate" }}
         />
         <div className="absolute inset-0 bg-black/25" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/15" />
