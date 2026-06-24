@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Award, Hammer, Truck, HeartHandshake } from "lucide-react";
-import { useState } from "react";
+import banner from "@/assets/banner.webp";
 import heroLiving from "@/assets/hero-living.jpg";
-import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import storyFamily from "@/assets/story-family.jpg";
 import aboutFabrica from "@/assets/about-fabrica.jpg";
 import { categories } from "@/lib/collections";
@@ -28,8 +27,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const [videoFailed, setVideoFailed] = useState(false);
-
   const manifestoT = useReveal(0);
   const manifestoImg = useReveal(200);
   const stats = useReveal(0);
@@ -40,28 +37,14 @@ function Index() {
 
   return (
     <>
-      {/* HERO — sempre dark */}
+      {/* HERO */}
       <section className="relative h-screen w-full overflow-hidden bg-black text-white">
-        {!videoFailed ? (
-          <video
-            src={heroVideo.url}
-            poster={heroLiving}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            onError={() => setVideoFailed(true)}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        ) : (
-          <img
-            src={heroLiving}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover"
-            style={{ animation: "ken-burns 20s ease-in-out infinite alternate" }}
-          />
-        )}
+        <img
+          src={banner}
+          alt="Casa Ambiente"
+          className="absolute inset-0 h-full w-full object-cover"
+          style={{ animation: "ken-burns 20s ease-in-out infinite alternate" }}
+        />
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-black/10" />
