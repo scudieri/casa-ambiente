@@ -66,12 +66,6 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-black/10" />
 
-        <div className="relative z-10 container-x flex justify-center pt-10 md:pt-12">
-          <span className="text-[13px] tracking-[0.28em] uppercase text-white/70 font-medium">
-            Casa Ambiente
-          </span>
-        </div>
-
         <div className="relative z-10 container-x flex h-[calc(100vh-9rem)] flex-col justify-end pb-16 md:pb-20">
           <div className="max-w-2xl animate-fade-in">
             <div className="flex items-center gap-3 mb-7 text-white/60">
